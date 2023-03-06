@@ -1,0 +1,71 @@
+\documentclass{article}
+
+%links im inhaltsverzeichnis verwenden
+\usepackage{hyperref}
+
+%Damit die Überschrift vom Inhaltsverzeichnis auf Deutsch angezeigt wird
+\usepackage[ngerman]{babel}
+
+% Damit umlaute richtig angezeigt werden
+\usepackage[utf8]{inputenc}
+
+% Randabstände anpassen
+\usepackage[left=2cm,right=2cm]{geometry}
+
+% wenn man blocksatz verwenden will. Nutze \justify  oder \section{justify} für blocksatz
+\usepackage{ragged2e}
+
+% schriftart arial verwenden
+\usepackage{arial}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\begin{document}
+
+%Inhaltsverzeichnis
+\newpage
+\tableofcontents
+\newpage
+
+%Beginn des Dokuments
+
+\section{Einleitung}
+Dieser Abschnitt führt in das Projekt ein.
+
+\subsection{Hintergrund}
+Dieser Abschnitt liefert Hintergrundinformationen zum Projekt.
+
+\subsubsection{Verwandte Arbeit}
+Dieser Abschnitt diskutiert verwandte Arbeit in diesem Bereich.
+
+\section{Methodik}
+Dieser Abschnitt beschreibt die Methodik, die im Projekt verwendet wird.
+
+\subsection{Datensammlung}
+Dieser Abschnitt beschreibt den Prozess der Datensammlung.
+
+\subsection{Datenanalyse}
+Dieser Abschnitt beschreibt den Prozess der Datenanalyse.
+
+\section{Ergebnisse}
+Dieser Abschnitt präsentiert die Ergebnisse des Projekts.
+
+\subsection{Quantitative Ergebnisse}
+Dieser Abschnitt präsentiert die quantitativen Ergebnisse.
+
+\subsection{Qualitative Ergebnisse}
+Dieser Abschnitt präsentiert die qualitativen Ergebnisse.
+
+\section{Schlussfolgerung}
+Dieser Abschnitt fasst das Projekt und seine Ergebnisse zusammen.
+
+
+
+\end{document}
+
+
