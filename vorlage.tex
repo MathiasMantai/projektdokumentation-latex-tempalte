@@ -13,17 +13,31 @@
 \usepackage[left=2cm,right=2cm]{geometry}
 
 % wenn man blocksatz verwenden will. Nutze \justify  oder \section{justify} für blocksatz
-\usepackage{ragged2e}
+%\usepackage{ragged2e}
 
 % schriftart arial verwenden
 \usepackage{arial}
 
+% package für das Einbinden von Grafiken
+\usepackage{graphicx}
+
+
+%farben setup für links
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
+    linkcolor=black,
     filecolor=magenta,      
     urlcolor=cyan,
 }
+
+
+
+%---------------------------------- Literaturverzeichnis
+\usepackage[backend=biber]{biblatex}
+\addbibresource{literatur.bib}
+
+%-------------------------------------------------------
+
 
 \begin{document}
 
@@ -32,39 +46,75 @@
 \tableofcontents
 \newpage
 
+%Abbildungsverzeichnis
+\newpage
+\listoffigures
+\newpage
+
 %Beginn des Dokuments
 
 \section{Einleitung}
 Dieser Abschnitt führt in das Projekt ein.
 
-\subsection{Hintergrund}
-Dieser Abschnitt liefert Hintergrundinformationen zum Projekt.
+\subsection{Projektumfeld}
+- Kurze Vorstellung des Ausbildungsbetriebs (Geschäftsfeld, Mitarbeiterzahl usw.) \linebreak
+- Wer ist Auftraggeber/Kunde des Projekts?
 
-\subsubsection{Verwandte Arbeit}
-Dieser Abschnitt diskutiert verwandte Arbeit in diesem Bereich.
+\subsection{Projektziel}
 
-\section{Methodik}
-Dieser Abschnitt beschreibt die Methodik, die im Projekt verwendet wird.
+\subsection{Projektbegründung}
 
-\subsection{Datensammlung}
-Dieser Abschnitt beschreibt den Prozess der Datensammlung.
+\subsection{Projektschnittstellen}
 
-\subsection{Datenanalyse}
-Dieser Abschnitt beschreibt den Prozess der Datenanalyse.
+\subsection{Projektabgrenzung}
 
-\section{Ergebnisse}
-Dieser Abschnitt präsentiert die Ergebnisse des Projekts.
+\section{Analyse}
 
-\subsection{Quantitative Ergebnisse}
-Dieser Abschnitt präsentiert die quantitativen Ergebnisse.
+\section{Planung}
 
-\subsection{Qualitative Ergebnisse}
-Dieser Abschnitt präsentiert die qualitativen Ergebnisse.
+\section{Entwurf}
 
-\section{Schlussfolgerung}
-Dieser Abschnitt fasst das Projekt und seine Ergebnisse zusammen.
+\section{Implementierung}
+
+\section{Validierungsphase}
+
+\section{Dokumentation}
+
+\section{Fazit}
+trhrhtrhtrh
+\linebreak
+\linebreak
+\linebreak
+\linebreak
+\linebreak
+\linebreak
+\linebreak
+\linebreak
 
 
+\section{Anhang}
+
+\subsection{Abbildungsverzeichnis}
+\begin{figure}
+	\centering
+	\includegraphics{nutz}
+	\caption [Nutzwertanalyse]{Nutzwertanalyse}
+	\label{fig:nutz}
+\end{figure}
+
+\subsection{Literaturverzeichnis}
+Die mathematischen Beispiele stammen aus \autocite{Graham1995}.
+
+Weitere Verweise: \parencite{Graham1995} oder \textcite{Thomas2008} oder sogar
+\citetitle{Graham1995}.
+
+\autocite[56]{Thomas2008}
+
+\autocite[Siehe][45-48]{Graham1995}
+
+Gemeinsam \autocite{Graham1995,Thomas2008}
+
+\printbibliography
 
 \end{document}
 
