@@ -1,26 +1,15 @@
 \documentclass{article}
 
-%links im inhaltsverzeichnis verwenden
+%packages
 \usepackage{hyperref}
-
-%Damit die Überschrift vom Inhaltsverzeichnis auf Deutsch angezeigt wird
 \usepackage[ngerman]{babel}
-
-% Damit umlaute richtig angezeigt werden
 \usepackage[utf8]{inputenc}
-
-% Randabstände anpassen
 \usepackage[left=2cm,right=2cm]{geometry}
-
-% wenn man blocksatz verwenden will. Nutze \justify  oder \section{justify} für blocksatz
-%\usepackage{ragged2e}
-
-% schriftart arial verwenden
 \usepackage{arial}
-
-% package für das Einbinden von Grafiken
 \usepackage{graphicx}
-
+\usepackage{eurosym}
+\usepackage{amsmath}
+\usepackage[backend=biber]{biblatex}
 
 %farben setup für links
 \hypersetup{
@@ -30,16 +19,24 @@
     urlcolor=cyan,
 }
 
+%pfad für images
+\graphicspath{{img/}}
 
-
-%---------------------------------- Literaturverzeichnis
-\usepackage[backend=biber]{biblatex}
+%lade das literaturverzeichnis
 \addbibresource{literatur.bib}
 
-%-------------------------------------------------------
 
-
+%beginn des dokuments
 \begin{document}
+
+%Deckblatt
+\newpage
+\begin{titlepage}
+	\centering
+	Dokumentation zur betrieblichen Projektarbeit
+\end{titlepage}
+\newpage
+
 
 %Inhaltsverzeichnis
 \newpage
@@ -57,7 +54,8 @@
 Dieser Abschnitt führt in das Projekt ein.
 
 \subsection{Projektumfeld}
-- Kurze Vorstellung des Ausbildungsbetriebs (Geschäftsfeld, Mitarbeiterzahl usw.) \linebreak
+- Kurze Vorstellung des Ausbildungsbetriebs (Geschäftsfeld, Mitarbeiterzahl usw.)
+
 - Wer ist Auftraggeber/Kunde des Projekts?
 
 \subsection{Projektziel}
@@ -70,37 +68,68 @@ Dieser Abschnitt führt in das Projekt ein.
 
 \section{Analyse}
 
+\subsection{IST-Analyse}
+
+\subsection{Wirtschaftlichkeitsanalyse}
+%Leerzeichen können mit dem Tilde Zeichen (~) gesetzt werden (Alt Gr + tilde auf tastatur)
+\[ \frac{100~Euro}{200~Tage} \]
+
 \section{Planung}
 
+%Entwurfsphase
 \section{Entwurf}
 
-\section{Implementierung}
+\subsection{Benutzeroberfläche}
 
+\subsubsection{Mitarbeiterbereich}
+
+\subsubsection{Admin Bereich}
+
+\subsection{Datenmodell}
+%mit datenmodell abbildung
+
+\subsection{Geschäftslogik}
+%darstellung der Logik des Moduls als Programmaublaufplan/Komponenten/Sequenzdiagramm
+
+%Implementierungsphase
+\section{Implementierung}
+\subsection{Implementierung der Datenstrukturen}
+\subsection{Implementierung der Benutzeroberfläche}
+% z.b. benutzeroberfläche mit html und css entwickelt
+\subsection{Implementierung der Geschäftslogik}
+
+%
 \section{Validierungsphase}
+%welche tests wurden durchgeführt (unit tests/ whitebox/ blackbox)
+
+\section{Einführungsphase}
+%wie lief das deployment ab (manuell/ automatisch mit pipelines)
+%migration von altdaten (z.b. aus alter Zeiterfassung)
+%schulungen für mitarbeiter durchgeführt?
+
 
 \section{Dokumentation}
+%wie wurde dokumentiert (php doc)
+%anwenderdokumentation (d.h. für alle mitarbeiter, nicht nur IT leute)
 
 \section{Fazit}
-trhrhtrhtrh
-\linebreak
-\linebreak
-\linebreak
-\linebreak
-\linebreak
-\linebreak
-\linebreak
-\linebreak
+\subsection{Soll-/Ist-Vergleich}
+\subsection{Gelerntes?}
+\subsection{Ausblick}
+%weiterentwicklung des projektes in der Zukunft
 
 
 \section{Anhang}
 
 \subsection{Abbildungsverzeichnis}
-\begin{figure}
+
+\subsubsection{Nutzwertanalyse}
+\begin{center}
 	\centering
-	\includegraphics{nutz}
-	\caption [Nutzwertanalyse]{Nutzwertanalyse}
+	\includegraphics[scale=0.2]{nutz}
 	\label{fig:nutz}
-\end{figure}
+\end{center}
+
 
 \subsection{Literaturverzeichnis}
 Die mathematischen Beispiele stammen aus \autocite{Graham1995}.
